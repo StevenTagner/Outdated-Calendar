@@ -1,0 +1,9 @@
+{
+  "name": "calender-prototype",
+  "version": "0.0.0",
+  "description": "CalenderPrototype",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}
