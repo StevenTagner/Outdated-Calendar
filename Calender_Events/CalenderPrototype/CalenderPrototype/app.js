@@ -4,24 +4,38 @@
  */
 
 class Event {
-    date = Date.now();
-    description = "Desc";
-    users = new Set();
-    owner;
-    editers = new Set();
+    startTime = Date.now();
     endTime = new Date();
+    title = "title"
+    description = "Desc";
+    attendees = new Set();
+    creator;
+    editers = new Set();
+
     //description = "Default Description";
     constructor(date, description, ...people) {
-        this.date = date;
+        this.startTime = date;
         this.description = description;
         for (const entry of people) {
-            this.users.add(entry);
+            this.attendees.add(entry);
         }
 
         this.endTime.setTime(date.getTime() + this.hoursToMiliseconds(1));
     }
     setOwner(newOwner) {
-        this.owner = newOwner;
+        this.creator = newOwner;
+    }
+    setTitle(newTitle) {
+        this.title = newTitle;
+    }
+    setDescription(newDescription) {
+        this.description = newDescription;
+    }
+    setStartTime(newStartTime) {
+        this.startTime = newStartTime;
+    }
+    setEndTime(newEndTime) {
+        this.endTime = newEndTime;
     }
     addEditer(person) {
         this.editers.add(person);
@@ -36,22 +50,22 @@ class Event {
 
     toString() {
         var output = "";
-        if (this.date != null) {
-            output += this.date.toString() + '\n';
+        if (this.startTime != null) {
+            output += this.startTime.toString() + '\n';
         }
         if (this.description != null) {
             output += this.description + '\n';
         }
-        if (this.users != null) {
-            for (const entry of this.users) {
+        if (this.attendees != null) {
+            for (const entry of this.attendees) {
                 output += entry.toString() + '\n';
             }
         }
-        if (this.owner != null) {
-            output += this.owner.toString() + '\n';
+        if (this.creator != null) {
+            output += this.creator.toString() + '\n';
         }
         if (this.editers != null) {
-            for(const entry of this.editers) {
+            for (const entry of this.editers) {
                 output += entry.toString() + '\n';
             }
         }
@@ -82,12 +96,13 @@ class Person {
 }
 const event = new Event(new Date(), "A string");
 var testUserID = 1;
-event.users.add(new Person("Alace", testUserID++, new Set()));
-event.users.add(new Person("Bob", testUserID++, new Set()));
-event.users.add(new Person("Charly", testUserID++, new Set()));
-event.users.add(new Person("Denice", testUserID++, new Set()));
+event.attendees.add(new Person("Alace", testUserID++, new Set()));
+event.attendees.add(new Person("Bob", testUserID++, new Set()));
+event.attendees.add(new Person("Charly", testUserID++, new Set()));
+event.attendees.add(new Person("Denice", testUserID++, new Set()));
 event.addEditer(new Person("Steve", testUserID++, new Set()));
-for (let item of event.users) console.log(item.toString() +": " + item.userId);
+for (let item of event.attendees) console.log(item.toString() + ": " + item.userId);
 
 console.log(event.toString());
+return;
 

@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CalenderPrototype"
+    "\\Calender_Events",
+    "\\Calender_Events\\CalenderPrototype"
   ],
-  "SelectedNode": "\\CalenderPrototype\\CalenderPrototype.sln",
+  "SelectedNode": "\\Calender_Events\\CalenderPrototype\\CalenderPrototype.sln",
   "PreviewInSolutionExplorer": false
 }

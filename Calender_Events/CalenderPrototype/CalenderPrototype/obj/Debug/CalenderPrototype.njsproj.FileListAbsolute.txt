@@ -1,3 +1,6 @@
 C:\Users\Nivek\source\repos\CalenderPrototype\CalenderPrototype\obj\Debug\CalenderPrototype.njsproj.AssemblyReference.cache
 C:\Users\Nivek\source\repos\CalenderPrototype\CalenderPrototype\obj\Debug\CalenderPrototype.njsproj.CoreCompileInputs.cache
 C:\Users\Nivek\source\repos\CalenderPrototype\CalenderPrototype\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\Nivek\Source\Repos\StevenTagner\Outdated-Calendar\Calender_Events\CalenderPrototype\CalenderPrototype\obj\Debug\CalenderPrototype.njsproj.AssemblyReference.cache
+C:\Users\Nivek\Source\Repos\StevenTagner\Outdated-Calendar\Calender_Events\CalenderPrototype\CalenderPrototype\obj\Debug\CalenderPrototype.njsproj.CoreCompileInputs.cache
+C:\Users\Nivek\Source\Repos\StevenTagner\Outdated-Calendar\Calender_Events\CalenderPrototype\CalenderPrototype\bin\Microsoft.NodejsTools.WebRole.dll
