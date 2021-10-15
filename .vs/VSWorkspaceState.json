@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Calender_Events",
-    "\\Calender_Events\\CalenderPrototype"
+    "\\Calender_Events\\CalenderPrototype",
+    "\\Calender_Events\\CalenderPrototype\\CalenderPrototype"
   ],
-  "SelectedNode": "\\Calender_Events\\CalenderPrototype\\CalenderPrototype.sln",
+  "SelectedNode": "\\Calender_Events\\CalenderPrototype\\CalenderPrototype\\app.js",
   "PreviewInSolutionExplorer": false
 }
