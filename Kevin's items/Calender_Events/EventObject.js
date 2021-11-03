@@ -1,13 +1,13 @@
 // JavaScript source code
 'use strict';
 class EventObject {
-    startTime;
-    endTime;
-    title;
-    description;
-    creator;
-    attendees = new Set();
-    tags = new Set();
+    startTime; //The time the event will start
+    endTime; //The time the event will end
+    title; //The title of the event
+    description; //A description of the event
+    creator; //The email address of the creator of the event
+    attendees = new Set(); // A set of strings of the emails of the people who will attend the event.
+    tags = new Set(); //The tags that are attached to the event.
 
 
     /**
@@ -26,12 +26,8 @@ class EventObject {
         this.title = title;
         this.description = description;
         this.creator = creator
-        for (i in attendees) {
-            this.attendees.add(i);
-        }
-        for (i in tags) {
-            this.tags.add(i);
-        }
+        this.attendees = attendees;
+        this.tags = tags;
     }
 
     /**
@@ -68,8 +64,16 @@ class EventObject {
         }
     }
 
-    //TODO: ask how we should handle view.
+    /**
+     *
+     *Returns a set of all emails assosiated with this event.
+     */
     view() {
-        throw "Method not implemented yet";
+        output = new Set();
+        for (i in this.attendees) {
+            output.add(i);
+        }
+        output.add(this.creator);
+        return output;
     }
 }
