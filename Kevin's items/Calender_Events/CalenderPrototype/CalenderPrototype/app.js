@@ -11,17 +11,20 @@ class Event {
     attendees = new Set();
     creator;
     editers = new Set();
-
+    tags = new Set();
     //description = "Default Description";
-    constructor(date, description, ...people) {
+    constructor(date, description, tags = "Event", ...people) {
         this.startTime = date;
         this.description = description;
         for (const entry of people) {
             this.attendees.add(entry);
         }
-
+        for (const tag in tags) {
+            this.tags.add(tag);
+        }
         this.endTime.setTime(date.getTime() + this.hoursToMiliseconds(1));
     }
+
     setOwner(newOwner) {
         this.creator = newOwner;
     }
@@ -94,6 +97,7 @@ class Person {
         return this.name
     }
 }
+
 const event = new Event(new Date(), "A string");
 var testUserID = 1;
 event.attendees.add(new Person("Alace", testUserID++, new Set()));
