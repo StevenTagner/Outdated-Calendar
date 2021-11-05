@@ -80,9 +80,15 @@ class EventObject {
 }
 
 class EventController {
-    valadate(startTime = undefined, endTime = undefined, title = undefined, description = undefined, creator = undefined, attendees = undefined, tags = undefined) {
-        //Add event to database and conform this.
-        throw "not implemented yet";
+    static valadate(startTime = undefined, endTime = undefined, title = undefined, description = undefined, creator = undefined, attendees = undefined, tags = undefined) {
+        //Make sure event is valid and then create it.
+        //throw "not implemented yet";
+
+        //TODO: Make sure startTime is sooner than endTime
+
+        //TODO: make sure event does not occur in the past.
+
+        return this.createCalenderEvent(startTime, endTime, title, description, creator, attendees, tags);
     }
 
 
@@ -96,15 +102,20 @@ class EventController {
      * @param {Set<string>} attendees A set of strings of the emails of the people who will attend the event.
      * @param {Set<string>} tags The tags that are attached to the event.
      */
-    createEvent(startTime = undefined, endTime = undefined, title = undefined, description = undefined, creator = undefined, attendees = undefined, tags = undefined) {
-        //TODO: Add event to database
-        return new EventObject(startTime = this.startTime, endTime = this.endTime, title = this.title, description = this.description, creator = this.creator, attendees = this.attendees, tags = this.tags);
+    static createCalenderEvent(startTime = undefined, endTime = undefined, title = undefined, description = undefined, creator = undefined, attendees = undefined, tags = undefined) {
 
+        //Create the event
+        event = new EventObject(startTime, endTime, title, description, creator, attendees, tags);
+
+        //TODO: Add event to database
+
+        //Return the event.
+        return event;
     }
 
 }
 
 console.log(10);
-var event = EventController.createEvent();
+var event = EventController.valadate();
 console.log(event.title);
 return;
