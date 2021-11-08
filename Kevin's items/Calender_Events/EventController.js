@@ -21,7 +21,7 @@ class EventObject {
      * @param {Set<string>} attendees A set of strings of the emails of the people who will attend the event.
      * @param {Set<string>} tags The tags that are attached to the event.
      */
-    constructor(startTime = Date.now, endTime = Date.now, title = "Event", description = "an event", creator = "Person", attendees = new Set(), tags = new Set()) {
+    constructor(startTime = Date.now(), endTime = startTime, title = "Event", description = "an event", creator = "Person", attendees = new Set(), tags = new Set()) {
         this.startTime = startTime;
         this.endTime = endTime;
         this.title = title;
@@ -85,9 +85,16 @@ class EventController {
         //throw "not implemented yet";
 
         //TODO: Make sure startTime is sooner than endTime
-
+        if ((startTime != undefined && endTime != undefined) && startTime.getTime() > endTime.getTime()) {
+            throw "Event must end after it begins";
+        }
+        /*
+         * //Note: this causes issues because time passes while the program runs
         //TODO: make sure event does not occur in the past.
-
+        if (startTime != undefined && (startTime.getTime() < Date.now.getTime())) {
+            throw "Event must not start in the past";
+        }
+        */
         return this.createCalenderEvent(startTime, endTime, title, description, creator, attendees, tags);
     }
 
@@ -117,5 +124,5 @@ class EventController {
 
 console.log(10);
 var event = EventController.valadate();
-console.log(event.title);
+console.log(event.startTime);
 return;
