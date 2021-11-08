@@ -1,6 +1,5 @@
 'use strict';
 // JavaScript source code
-'use strict';
 class EventObject {
     startTime; //The time the event will start
     endTime; //The time the event will end
@@ -14,14 +13,14 @@ class EventObject {
     /**
      * Constructs an EventObject with the given proproties
      * @param {Date} startTime The time the event will start
-     * @param {Date} endTime The time the event will end
+     * @param {Date} endTime The time the event will end. Defaults to one hour after the event starts
      * @param {string} title The title of the event
      * @param {string} description A description of the event
      * @param {string} creator The email address of the creator of the event
      * @param {Set<string>} attendees A set of strings of the emails of the people who will attend the event.
      * @param {Set<string>} tags The tags that are attached to the event.
      */
-    constructor(startTime = Date.now(), endTime = startTime, title = "Event", description = "an event", creator = "Person", attendees = new Set(), tags = new Set()) {
+    constructor(startTime = Date.now(), endTime = new Date(startTime + EventController.hoursToMiliseconds(1)), title = "Event", description = "an event", creator = "Person", attendees = new Set(), tags = new Set()) {
         this.startTime = startTime;
         this.endTime = endTime;
         this.title = title;
@@ -70,8 +69,8 @@ class EventObject {
      *Returns a set of all emails assosiated with this event.
      */
     view() {
-        output = new Set();
-        for (i in this.attendees) {
+        var output = new Set();
+        for (let i of this.attendees) {
             output.add(i);
         }
         output.add(this.creator);
@@ -115,14 +114,48 @@ class EventController {
         event = new EventObject(startTime, endTime, title, description, creator, attendees, tags);
 
         //TODO: Add event to database
-
+        try {
+            pushEventToDatabase(event);
+        } catch (error) {
+            console.error(error);
+        }
+        
         //Return the event.
         return event;
+    }
+
+    /**
+     * Pushes the given event to the EventDatabase
+     * @param {any} event the event to be pushed.
+     */
+    pushEventToDatabase(event) {
+        throw "not implemented yet,";
+    }
+
+    /**
+     * Converts a number of hours to miliseconds. To be used to allow an endTime to be <hours> hours later than a startTime. 
+     * @param {any} hours The number of hours to be converted to miliseconds.
+     */
+    static hoursToMiliseconds(hours) {
+        return hours * 3.6e+6;
     }
 
 }
 
 console.log(10);
-var event = EventController.valadate();
-console.log(event.startTime);
+var emails = new Set(["rddesign@gmail.com",
+    "stakasa@verizon.net",
+    "majordick@live.com",
+    "amaranth@gmail.com",
+    "ovprit@comcast.net",
+    "harryh@comcast.net",
+    "lbaxter@yahoo.com",
+    "qmacro@yahoo.ca",
+    "devphil@mac.com",
+    "kdawson@sbcglobal.net",
+    "errxn@yahoo.ca",
+    "cmdrgravy@gmail.com"]);
+var event = EventController.valadate(new Date(10), undefined, "new title", "new description", "testleader@gmail.com", emails, undefined);
+
+console.log(event.view());
 return;
