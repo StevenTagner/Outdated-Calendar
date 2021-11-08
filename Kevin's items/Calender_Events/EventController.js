@@ -8,6 +8,9 @@ class EventObject {
     creator; //The email address of the creator of the event
     attendees = new Set(); // A set of strings of the emails of the people who will attend the event.
     tags = new Set(); //The tags that are attached to the event.
+    eventID; //An ID that uniquely identifies this event in the database
+    
+
 
 
     /**
@@ -28,6 +31,24 @@ class EventObject {
         this.creator = creator
         this.attendees = attendees;
         this.tags = tags;
+
+        //add in next eventid.
+        var gotId = false;
+        var temp = Math.random();
+        while (EventObject.databaseContainsID(temp)) {
+            //temp = Math.random();
+        }
+
+        this.eventID = temp;
+    }
+
+    /**
+     *  querey database to see if an event containing the given ID exists. return true if it does and false otherwise.
+     * @param {int} testID the eventID to be tested.
+     */
+    static databaseContainsID(testID) {
+        //TODO: querey database to see if an event containing the given ID exists. return true if it does and false otherwise.
+        return false;
     }
 
     /**
@@ -79,13 +100,17 @@ class EventObject {
 }
 
 class EventController {
+
+    static confirmEvent(user) {
+        this.attendees.add(user);
+    }
     static valadate(startTime = undefined, endTime = undefined, title = undefined, description = undefined, creator = undefined, attendees = undefined, tags = undefined) {
         //Make sure event is valid and then create it.
         //throw "not implemented yet";
 
-        //TODO: Make sure startTime is sooner than endTime
+        //Make sure startTime is sooner than endTime
         if ((startTime != undefined && endTime != undefined) && startTime.getTime() > endTime.getTime()) {
-            throw "Event must end after it begins";
+            throw "Event must end after it begins.";
         }
         /*
          * //Note: this causes issues because time passes while the program runs
