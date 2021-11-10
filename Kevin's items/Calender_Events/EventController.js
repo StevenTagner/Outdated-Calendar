@@ -35,7 +35,7 @@ class EventObject {
         //add in next eventid.
         var gotId = false;
         var temp = EventController.getTestID();
-        console.log(temp);
+        //console.log(temp);
         while (EventObject.databaseContainsID(temp)) {
             temp = EventController.getTestID();
         }
@@ -98,6 +98,36 @@ class EventObject {
             output.add(i);
         }
         output.add(this.creator);
+        return output;
+    }
+
+    toString() {
+        var output = "";
+
+        if (this.startTime != null) {
+            output += "startTime : " + this.startTime.toString() + "\n";
+        }
+        if (this.endTime != null) {
+            output += "endTime : " + this.endTime.toString() + "\n";
+        }
+        if (this.title != null) {
+            output += "title : " + this.title + "\n";
+        }
+        if (this.description != null) {
+            output += "description : " + this.description + "\n";
+        }
+        if (this.creator != null) {
+            output += "creator : " + this.creator + "\n";
+        }
+        for (let i of this.attendees) {
+            output += "attendee : " + i + "\n";
+        }
+        
+        if (this.tags != null) {
+            for (let i of this.tags) {
+                output += "Tags : " + i; + "\n";
+            }
+        }
         return output;
     }
 }
@@ -208,7 +238,7 @@ var emails = new Set(["rddesign@gmail.com",
     "kdawson@sbcglobal.net",
     "errxn@yahoo.ca",
     "cmdrgravy@gmail.com"]);
-var event = EventController.valadate(null, null, null, null, null, null, null);
+var event = EventController.valadate(null, null, null, null, "Creator@gmail.com", emails, null);
 event.edit(null, null, null, "2nd description", null);
-console.log(event.title);
+console.log(event.toString());
 return;
