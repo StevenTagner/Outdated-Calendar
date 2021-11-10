@@ -12,7 +12,7 @@ class EventObject {
     
 
 
-
+    
     /**
      * Constructs an EventObject with the given proproties
      * @param {Date} startTime The time the event will start
@@ -34,9 +34,10 @@ class EventObject {
 
         //add in next eventid.
         var gotId = false;
-        var temp = Math.random();
+        var temp = EventController.getTestID();
+        console.log(temp);
         while (EventObject.databaseContainsID(temp)) {
-            //temp = Math.random();
+            temp = EventController.getTestID();
         }
 
         this.eventID = temp;
@@ -50,6 +51,8 @@ class EventObject {
         //TODO: querey database to see if an event containing the given ID exists. return true if it does and false otherwise.
         return false;
     }
+
+    
 
     /**
      * Changes given fields to what is given.
@@ -108,6 +111,28 @@ class EventController {
         //Make sure event is valid and then create it.
         //throw "not implemented yet";
 
+        if (startTime == null) {
+            startTime = undefined;
+        }
+        if (endTime == null) {
+            endTime = undefined;
+        }
+        if (title == null) {
+            title = undefined;
+        }
+        if (description == null) {
+            description = undefined;
+        }
+        if (creator == null) {
+            creator = undefined;
+        }
+        if (attendees == null) {
+            attendees = undefined;
+        }
+        if (tags == null) {
+            tags = undefined;
+        }
+
         //Make sure startTime is sooner than endTime
         if ((startTime != undefined && endTime != undefined) && startTime.getTime() > endTime.getTime()) {
             throw "Event must end after it begins.";
@@ -165,6 +190,9 @@ class EventController {
         return hours * 3.6e+6;
     }
 
+    static getTestID() {
+        return Math.floor((Math.random() * 100000000));
+    }
 }
 
 console.log(10);
@@ -180,7 +208,7 @@ var emails = new Set(["rddesign@gmail.com",
     "kdawson@sbcglobal.net",
     "errxn@yahoo.ca",
     "cmdrgravy@gmail.com"]);
-var event = EventController.valadate(new Date(10), undefined, "new title", "new description", "testleader@gmail.com", emails, undefined);
-
-console.log(event.view());
+var event = EventController.valadate(null, null, null, null, null, null, null);
+event.edit(null, null, null, "2nd description", null);
+console.log(event.title);
 return;
