@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\steve\\Desktop\\School\\CSC340\\MvcEvent\\MvcEvent.csproj": {}
+    "C:\\Users\\steve\\Documents\\GitHub\\Outdated-Calendar\\Account Managment\\MvcEvent\\MvcEvent.csproj": {}
   },
   "projects": {
-    "C:\\Users\\steve\\Desktop\\School\\CSC340\\MvcEvent\\MvcEvent.csproj": {
+    "C:\\Users\\steve\\Documents\\GitHub\\Outdated-Calendar\\Account Managment\\MvcEvent\\MvcEvent.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\steve\\Desktop\\School\\CSC340\\MvcEvent\\MvcEvent.csproj",
+        "projectUniqueName": "C:\\Users\\steve\\Documents\\GitHub\\Outdated-Calendar\\Account Managment\\MvcEvent\\MvcEvent.csproj",
         "projectName": "MvcEvent",
-        "projectPath": "C:\\Users\\steve\\Desktop\\School\\CSC340\\MvcEvent\\MvcEvent.csproj",
+        "projectPath": "C:\\Users\\steve\\Documents\\GitHub\\Outdated-Calendar\\Account Managment\\MvcEvent\\MvcEvent.csproj",
         "packagesPath": "C:\\Users\\steve\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\steve\\Desktop\\School\\CSC340\\MvcEvent\\obj\\",
+        "outputPath": "C:\\Users\\steve\\Documents\\GitHub\\Outdated-Calendar\\Account Managment\\MvcEvent\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -64,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

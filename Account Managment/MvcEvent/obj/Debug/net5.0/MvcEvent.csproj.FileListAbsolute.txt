@@ -38,3 +38,45 @@ C:\Users\steve\Desktop\School\CSC340\MvcEvent\obj\Debug\net5.0\ref\MvcEvent.dll
 C:\Users\steve\Desktop\School\CSC340\MvcEvent\obj\Debug\net5.0\MvcEvent.pdb
 C:\Users\steve\Desktop\School\CSC340\MvcEvent\obj\Debug\net5.0\MvcEvent.genruntimeconfig.cache
 C:\Users\steve\Desktop\School\CSC340\MvcEvent\obj\Debug\net5.0\MvcEvent.csproj.CopyComplete
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\bin\Debug\net5.0\appsettings.json
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\bin\Debug\net5.0\MvcEvent.exe
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\bin\Debug\net5.0\MvcEvent.deps.json
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\bin\Debug\net5.0\MvcEvent.runtimeconfig.json
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\bin\Debug\net5.0\MvcEvent.runtimeconfig.dev.json
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\bin\Debug\net5.0\MvcEvent.dll
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\bin\Debug\net5.0\ref\MvcEvent.dll
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\bin\Debug\net5.0\MvcEvent.pdb
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\bin\Debug\net5.0\MvcEvent.Views.dll
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\bin\Debug\net5.0\MvcEvent.Views.pdb
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\MvcEvent.csproj.AssemblyReference.cache
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\MvcEvent.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\MvcEvent.AssemblyInfoInputs.cache
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\MvcEvent.AssemblyInfo.cs
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\MvcEvent.csproj.CoreCompileInputs.cache
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\MvcEvent.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\MvcEvent.RazorAssemblyInfo.cache
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\MvcEvent.RazorAssemblyInfo.cs
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\staticwebassets\MvcEvent.StaticWebAssets.Manifest.cache
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\staticwebassets\MvcEvent.StaticWebAssets.xml
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\scopedcss\bundle\MvcEvent.styles.css
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\MvcEvent.TagHelpers.input.cache
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\MvcEvent.TagHelpers.output.cache
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\MvcEvent.RazorCoreGenerate.cache
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\MvcEvent.RazorTargetAssemblyInfo.cache
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\MvcEvent.RazorTargetAssemblyInfo.cs
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\MvcEvent.Views.pdb
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\MvcEvent.dll
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\ref\MvcEvent.dll
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\MvcEvent.pdb
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\MvcEvent.genruntimeconfig.cache
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\MvcEvent.csproj.CopyComplete
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\Razor\Views\HelloWorld\Index.cshtml.g.cs
+C:\Users\steve\Documents\GitHub\Outdated-Calendar\Account Managment\MvcEvent\obj\Debug\net5.0\Razor\Views\HelloWorld\Welcome.cshtml.g.cs
