@@ -1,0 +1,24 @@
+﻿@model List<OutdatedCalendarchat.Models.Message>
+<h2>Welcome to ASP.NET MVC @ViewData["Version"] on @ViewData["Runtime"]!</h2>
+<table>
+    <thead>
+        <tr>
+        <td>From</td>
+        <td>To</td>
+        <td>Message</td>
+        <td>Sent Date</td>
+          </tr>
+    </thead>
+    <tbody>
+        @foreach (var message in (List < OutdatedCalendarchat.Models.Message >)ViewBag.Messages)
+        {
+            <tr>
+        <td>@message.From</td>
+            <td>@message.To</td>
+                <td>@message.Desc</td>
+                <td>@message.SentDate</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
