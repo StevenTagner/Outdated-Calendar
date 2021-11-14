@@ -17,6 +17,7 @@ namespace OutdatedCalendarChatCore.Models
         {
         }
 
+        public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Message> Messages { get; set; }
         public virtual DbSet<MessageRecipient> MessageRecipients { get; set; }
         public virtual DbSet<Person> People { get; set; }
@@ -33,6 +34,23 @@ namespace OutdatedCalendarChatCore.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
+
+            modelBuilder.Entity<Account>(entity =>
+            {
+                entity.ToTable("Account");
+
+                entity.Property(e => e.Age).HasColumnType("numeric(18, 2)");
+
+                entity.Property(e => e.Birthday).HasColumnType("datetime");
+
+                entity.Property(e => e.Email)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Password)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+            });
 
             modelBuilder.Entity<Message>(entity =>
             {

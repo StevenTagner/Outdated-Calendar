@@ -8,16 +8,18 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using OutdatedCalendarchat.Models;
 using OutdatedCalendarChatCore.Models;
+using OutdatedCalendarChatCore.Services;
 
 namespace OutdatedCalendarChatCore.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+        private readonly MessagingService messagingService;
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            messagingService = new MessagingService();
         }
         public ActionResult AllMessages()
         {
@@ -26,15 +28,7 @@ namespace OutdatedCalendarChatCore.Controllers
 
             ViewData["Version"] = mvcName.Version.Major + "." + mvcName.Version.Minor;
             ViewData["Runtime"] = isMono ? "Mono" : ".NET";
-            List<MessageViewModel> messages = new List<MessageViewModel>();
-            var testMessage = new MessageViewModel
-            {
-                From = "Chuck",
-                To = "Zoie",
-                Desc = "This is a test",
-                SentDate = DateTime.Now
-            };
-            messages.Add(testMessage);
+            List<MessageViewModel> messages = messagingService.GetMessagesByPersonId(1);
             ViewBag.Messages = messages;
             return View();
         }
@@ -58,10 +52,5 @@ namespace OutdatedCalendarChatCore.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }
