@@ -1,0 +1,20 @@
+﻿@model OutdatedCalendarchat.Models.SendMessageViewModel  
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SendMessage</title>
+</head>
+<body>
+    <form>
+        <label>Recipients</label>
+        @Html.ListBoxFor(model=>model.SelectedRecipientList, Model.AvailableRecipientList)
+        <labl>Message</labl>
+        @Html.EditorFor(model=>model.Desc)
+        <input type="submit" value="Send" />
+    </form>
+</body>
+</html>
