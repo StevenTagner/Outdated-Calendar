@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.808.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutdatedCalendarchat", "OutdatedCalendarchat\OutdatedCalendarchat.csproj", "{3ACE544D-6273-4B5C-8F28-9C477B125B73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutdatedCalendarchat.Tests", "OutdatedCalendarchat.Tests\OutdatedCalendarchat.Tests.csproj", "{A6086AF1-CD0B-4217-A613-50E25237B75A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3ACE544D-6273-4B5C-8F28-9C477B125B73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ACE544D-6273-4B5C-8F28-9C477B125B73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ACE544D-6273-4B5C-8F28-9C477B125B73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ACE544D-6273-4B5C-8F28-9C477B125B73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6086AF1-CD0B-4217-A613-50E25237B75A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6086AF1-CD0B-4217-A613-50E25237B75A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6086AF1-CD0B-4217-A613-50E25237B75A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6086AF1-CD0B-4217-A613-50E25237B75A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9BEC7C24-DD8E-4228-B1DA-04AA4076077E}
+	EndGlobalSection
+EndGlobal
