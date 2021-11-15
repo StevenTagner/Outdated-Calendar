@@ -4,6 +4,7 @@ using EventAppPage.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EventAppPage.Migrations
 {
     [DbContext(typeof(EventAppPageContext))]
-    partial class EventAppPageContextModelSnapshot : ModelSnapshot
+    [Migration("20211115193821_AddCollection1")]
+    partial class AddCollection1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,6 +44,9 @@ namespace EventAppPage.Migrations
                     b.Property<DateTime?>("StartTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Tags")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
@@ -64,14 +69,9 @@ namespace EventAppPage.Migrations
                     b.Property<int?>("EventObjectId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("EventObjectId1")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("EventObjectId");
-
-                    b.HasIndex("EventObjectId1");
 
                     b.ToTable("StringContainer");
                 });
@@ -81,17 +81,11 @@ namespace EventAppPage.Migrations
                     b.HasOne("EventAppPage.Models.EventObject", null)
                         .WithMany("Attendees")
                         .HasForeignKey("EventObjectId");
-
-                    b.HasOne("EventAppPage.Models.EventObject", null)
-                        .WithMany("Tags")
-                        .HasForeignKey("EventObjectId1");
                 });
 
             modelBuilder.Entity("EventAppPage.Models.EventObject", b =>
                 {
                     b.Navigation("Attendees");
-
-                    b.Navigation("Tags");
                 });
 #pragma warning restore 612, 618
         }

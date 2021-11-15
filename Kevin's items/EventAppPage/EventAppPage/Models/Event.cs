@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
 namespace EventAppPage.Models
 {
@@ -15,8 +16,15 @@ namespace EventAppPage.Models
         public string? Creator { get; set; }
 
         ///TODO: Add these once I get the HashSet Key working
-        //public HashSet<string>? Attendees { get; set; }
-        
-        //public HashSet<string>? Tags { get; set; }
+        public ICollection<StringContainer>? Attendees { get; set; }
+
+        public ICollection<StringContainer>? Tags { get; set; }
+    }
+
+    public class StringContainer
+    {
+        public int ? Id { get; set; }
+
+        public string? Content { get; set; }
     }
 }

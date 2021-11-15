@@ -38,6 +38,16 @@
                 <span asp-validation-for="Creator" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Attendees" class="control-label"></label>
+                <input asp-for="Attendees" class="form-control" />
+                <span asp-validation-for="Attendees" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tags" class="control-label"></label>
+                <input asp-for="Tags" class="form-control" />
+                <span asp-validation-for="Tags" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
