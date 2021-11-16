@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Account Managment",
-    "\\Kevin's items"
+    "\\Kevin's items",
+    "\\Kevin's items\\EventAppPage",
+    "\\Zoie Harris",
+    "\\Zoie Harris\\OutdatedCalendarchat"
   ],
-  "SelectedNode": "\\Kevin's items\\New folder",
+  "SelectedNode": "\\Kevin's items\\EventAppPage\\EventAppPage.sln",
   "PreviewInSolutionExplorer": false
 }

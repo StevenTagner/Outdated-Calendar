@@ -16,9 +16,9 @@ namespace EventAppPage.Models
         public string? Creator { get; set; }
 
         ///TODO: Add these once I get the HashSet Key working
-        public ICollection<StringContainer>? Attendees { get; set; }
+        //public ICollection<StringContainer>? Attendees { get; set; }
 
-        public ICollection<StringContainer>? Tags { get; set; }
+        public string? Tags { get; set; }
     }
 
     public class StringContainer
