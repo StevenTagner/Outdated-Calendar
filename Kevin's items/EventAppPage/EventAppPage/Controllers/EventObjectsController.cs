@@ -54,7 +54,7 @@ namespace EventAppPage.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,StartTime,EndTime,Title,Description,Creator,Tags")] EventObject eventObject)
+        public async Task<IActionResult> Create([Bind("Id,StartTime,Duration,Title,Description,Creator,Tags")] EventObject eventObject)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace EventAppPage.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,StartTime,EndTime,Title,Description,Creator,Tags")] EventObject eventObject)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,StartTime,Duration,Title,Description,Creator,Tags")] EventObject eventObject)
         {
             if (id != eventObject.Id)
             {

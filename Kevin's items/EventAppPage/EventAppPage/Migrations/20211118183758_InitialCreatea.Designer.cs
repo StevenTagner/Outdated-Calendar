@@ -4,6 +4,7 @@ using EventAppPage.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EventAppPage.Migrations
 {
     [DbContext(typeof(EventAppPageContext))]
-    partial class EventAppPageContextModelSnapshot : ModelSnapshot
+    [Migration("20211118183758_InitialCreatea")]
+    partial class InitialCreatea
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,45 +47,15 @@ namespace EventAppPage.Migrations
                     b.Property<DateTime?>("StartTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Tags")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("EventObject");
-                });
-
-            modelBuilder.Entity("EventAppPage.Models.StringContainer", b =>
-                {
-                    b.Property<int?>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"), 1L, 1);
-
-                    b.Property<string>("Content")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("EventObjectId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("EventObjectId");
-
-                    b.ToTable("StringContainer");
-                });
-
-            modelBuilder.Entity("EventAppPage.Models.StringContainer", b =>
-                {
-                    b.HasOne("EventAppPage.Models.EventObject", null)
-                        .WithMany("Tags")
-                        .HasForeignKey("EventObjectId");
-                });
-
-            modelBuilder.Entity("EventAppPage.Models.EventObject", b =>
-                {
-                    b.Navigation("Tags");
                 });
 #pragma warning restore 612, 618
         }
