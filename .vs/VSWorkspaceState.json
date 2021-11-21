@@ -1,7 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Kevin's items",
+    "\\Kevin's items\\EventAppPage",
+    "\\Kevin's items\\EventAppPage\\EventAppPage",
+    "\\Kevin's items\\EventAppPage\\EventAppPage\\Controllers",
+    "\\Kevin's items\\EventAppPage\\EventAppPage\\Models",
+    "\\Kevin's items\\EventAppPage\\EventAppPage\\Views",
+    "\\Kevin's items\\EventAppPage\\EventAppPage\\Views\\Event",
+    "\\Kevin's items\\EventAppPage\\EventAppPage\\Views\\EventObjects"
   ],
-  "SelectedNode": "\\EventAppPage.sln",
+  "SelectedNode": "\\Kevin's items\\EventAppPage\\EventAppPage\\Models\\Event.cs",
   "PreviewInSolutionExplorer": false
 }

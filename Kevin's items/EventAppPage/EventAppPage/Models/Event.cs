@@ -7,7 +7,11 @@ namespace EventAppPage.Models
     {
         public EventObject()
         {
-            Tags = new TestCollection();
+            if(Tags == null)
+            {
+                Tags = new TestCollection();
+            }
+            //Tags.Add(s);
             StringContainer test = new StringContainer();
             test.Content = "Item 1";
             Tags.Add(test);
@@ -31,6 +35,8 @@ namespace EventAppPage.Models
         public string? Description { get; set; }
         public string? Creator { get; set; }
         public ICollection<StringContainer>? Tags { get; set; }
+
+        
         ///TODO: Add these once I get the HashSet Key working
         //public ICollection<StringContainer>? Attendees { get; set; }
 
