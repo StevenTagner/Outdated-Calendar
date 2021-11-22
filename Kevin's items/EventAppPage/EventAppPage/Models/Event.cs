@@ -5,24 +5,7 @@ namespace EventAppPage.Models
 {
     public class EventObject
     {
-        static int testID = 1;
-        public EventObject()
-        {
-            
-            if(Tags == null)
-            {
-                Tags = new TestCollection();
-            }
-            //Tags.Add(s);
-            StringContainer test = new StringContainer();
-            test.Content = "Item " + testID++.ToString();
-            Tags.Add(test);
-
-            StringContainer test2 = new StringContainer();
-            test2.Content = "Item " + testID++.ToString();
-            Tags.Add(test2);
-
-        }
+        
         public int Id { get; set; }
         [DataType(DataType.Date)]
         public DateTime? StartTime { get; set; }
@@ -36,7 +19,7 @@ namespace EventAppPage.Models
         public string? Title { get; set; }
         public string? Description { get; set; }
         public string? Creator { get; set; }
-        public ICollection<StringContainer>? Tags { get; set; }
+        public string? Tags { get; set; }
 
         
         ///TODO: Add these once I get the HashSet Key working
