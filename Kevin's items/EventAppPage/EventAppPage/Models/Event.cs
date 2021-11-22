@@ -5,19 +5,21 @@ namespace EventAppPage.Models
 {
     public class EventObject
     {
+        static int testID = 1;
         public EventObject()
         {
+            
             if(Tags == null)
             {
                 Tags = new TestCollection();
             }
             //Tags.Add(s);
             StringContainer test = new StringContainer();
-            test.Content = "Item 1";
+            test.Content = "Item " + testID++.ToString();
             Tags.Add(test);
 
             StringContainer test2 = new StringContainer();
-            test2.Content = "Item 2";
+            test2.Content = "Item " + testID++.ToString();
             Tags.Add(test2);
 
         }
