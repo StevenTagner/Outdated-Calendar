@@ -15,7 +15,7 @@ namespace EventAppPage.Models
         [DataType(DataType.Date)]
         public DateTime? EndTime { get; set; }
         
-        public int? Duration { get; set; }
+        public uint? Duration { get; set; }
         public string? Title { get; set; }
         public string? Description { get; set; }
         public string? Creator { get; set; }
