@@ -35,12 +35,15 @@ namespace OutdatedCalendarChatCore.Controllers
         public ActionResult SendMessage()
         {
             var sendMessage = new SendMessageViewModel();
-            List<RecipientViewModel> recipients = new List<RecipientViewModel>();
-            recipients.Add(new RecipientViewModel { Name = "Chuck" });
-            recipients.Add(new RecipientViewModel { Name = "Tom" });
-            recipients.Add(new RecipientViewModel { Name = "John" });
+            List<RecipientViewModel> recipients = messagingService.GetRecipients();
             sendMessage.AvailableRecipientList = new MultiSelectList(recipients, "Id", "Name");
             return View(sendMessage);
+        }
+        [HttpPost]
+        public ActionResult SendMessage(SendMessageViewModel sendMessageViewModel)
+        {
+            messagingService.SendMessage(sendMessageViewModel);
+            return RedirectToAction("AllMessages");
         }
         public IActionResult Index()
         {

@@ -48,5 +48,38 @@ namespace OutdatedCalendarChatCore.Services
             }
             return result;
         }
+
+        internal List<RecipientViewModel> GetRecipients()
+        {
+            return dbContext.People.Where(i => i.Id != 1).Select(i => new RecipientViewModel
+            {
+                Id = i.Id,
+                Name = i.FirstName + " " + i.LastName
+            }).ToList();
+        }
+
+        internal void SendMessage(SendMessageViewModel sendMessageViewModel)
+        {
+            var message = new Message
+            {
+                Description = sendMessageViewModel.Desc,
+                FromPersonId = 1,
+                SentDate = DateTime.Now
+            };
+            dbContext.Messages.Add(message);
+            dbContext.SaveChanges();
+
+            foreach (var item in sendMessageViewModel.SelectedRecipientList)
+            {
+                var messageRecipient = new MessageRecipient
+                {
+                    MessageId = message.Id,
+                    ToPersonId = item
+                };
+                dbContext.MessageRecipients.Add(messageRecipient);
+                dbContext.SaveChanges();
+
+            }
+        }
     }
 }

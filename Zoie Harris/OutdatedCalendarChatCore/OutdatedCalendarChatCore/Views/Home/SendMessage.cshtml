@@ -9,7 +9,7 @@
     <title>SendMessage</title>
 </head>
 <body>
-    <form>
+    <form asp-action="SendMessage">
         <label>Recipients</label>
         @Html.ListBoxFor(model=>model.SelectedRecipientList, Model.AvailableRecipientList)
         <labl>Message</labl>
