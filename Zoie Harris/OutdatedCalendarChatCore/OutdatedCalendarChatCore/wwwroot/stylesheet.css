@@ -1,0 +1,94 @@
+/* * {border:1px dashed black}*:hover {border:1px solid red} */
+/* DONT LEAVE THIS IN THE FINAL CODE */
+
+html,body {
+    height:100%;
+    display: flex;
+    flex-direction: column
+    ; overflow: hidden
+}
+* {padding: 0; margin: 0}
+
+body {
+    margin:0;
+    padding:0;
+    /* margin-left:10%;
+    margin-right:10%; */
+    font-family: "Corbel", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", 
+        "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+    font-size:1.25em;
+    line-height:1.5em;
+    background-color:#fff;
+    color:#000;
+}
+
+header {
+    height:2em;
+    padding-top:1em;
+    padding-bottom:1em;
+    padding-left:2em;
+    display:flex;
+    align-items:center;
+    background-color:lightgrey;
+    border-bottom:2px solid black;
+}
+
+.content {
+    display:flex;
+    flex-direction:row;;
+    height:100%
+}
+
+.menu-column {
+    width:15%;
+    border-right: 2px solid black;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.menu-column>div {
+    margin-top:.25em;
+    margin-bottom:.25em;
+    padding-left:2em;
+    padding-top:.25em;
+    padding-bottom:.25em;
+}
+
+.menu-column>div:first-child {
+    margin-top:.5em;
+}
+
+.menu-column>div:hover {
+    background-color:lightgrey;
+}
+
+.center>* {
+    display:block;
+}
+
+.calendar>table {
+    height:calc(100% - 4em);
+    width:calc(85% - 2px);
+    position:absolute;
+    border-collapse:collapse;
+    table-layout:fixed;
+}
+
+.calendar>table *{
+    border:1px solid grey;
+}
+
+.calendar>table td {
+    text-align:right;
+    vertical-align:top;
+}
+
+.calendar>table th {
+    height:7%;
+}
+
+.calendar .month :first-child:hover,
+.calendar .month :last-child:hover {
+    background-color:lightgrey;
+}
