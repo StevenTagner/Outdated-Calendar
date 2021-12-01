@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Pages\Areas\Identity\Pages\_ViewStart.cshtml" />
     <None Include="Pages\Error.cshtml" />
     <None Include="Pages\_Layout.cshtml" />
     <None Include="Pages\_ViewImports.cshtml" />
@@ -28,6 +29,7 @@
     <None Include="Views\Event\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.12" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.12" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.12">
