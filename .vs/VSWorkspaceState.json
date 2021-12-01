@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Kevin's items",
-    "\\Kevin's items\\Calender_Events",
-    "\\Kevin's items\\Calender_Events\\CalenderPrototype",
-    "\\Kevin's items\\Calender_Events\\CalenderPrototype\\CalenderPrototype"
+    "\\Kevin's items\\EventAppPage",
+    "\\Kevin's items\\EventAppPage\\EventAppPage",
+    "\\Zoie Harris",
+    "\\Zoie Harris\\OutdatedCalendarchat"
   ],
-  "SelectedNode": "\\Kevin's items\\Calender_Events\\EventController.js",
+  "SelectedNode": "\\Kevin's items\\EventAppPage\\EventAppPage.sln",
   "PreviewInSolutionExplorer": false
 }
