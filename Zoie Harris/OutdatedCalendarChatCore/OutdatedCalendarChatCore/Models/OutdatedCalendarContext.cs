@@ -18,6 +18,7 @@ namespace OutdatedCalendarChatCore.Models
         }
 
         public virtual DbSet<Account> Accounts { get; set; }
+        public virtual DbSet<EventObject> EventObjects { get; set; }
         public virtual DbSet<Message> Messages { get; set; }
         public virtual DbSet<MessageRecipient> MessageRecipients { get; set; }
         public virtual DbSet<Person> People { get; set; }
@@ -49,6 +50,31 @@ namespace OutdatedCalendarChatCore.Models
 
                 entity.Property(e => e.Password)
                     .HasMaxLength(50)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<EventObject>(entity =>
+            {
+                entity.ToTable("EventObject");
+
+                entity.Property(e => e.Creator)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Description)
+                    .HasMaxLength(1000)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.EndTime).HasColumnType("datetime");
+
+                entity.Property(e => e.StartTime).HasColumnType("datetime");
+
+                entity.Property(e => e.Tags)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Title)
+                    .HasMaxLength(100)
                     .IsUnicode(false);
             });
 
